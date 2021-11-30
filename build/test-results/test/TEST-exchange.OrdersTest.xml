@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="exchange.OrdersTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-30T15:43:21" hostname="RWB" time="0.394">
+  <properties/>
+  <testcase name="testLimitSellOrder()" classname="exchange.OrdersTest" time="0.394"/>
+  <system-out><![CDATA[UpbitResponse(status=401, isSuccess=false, body=null, raw={"error":{"message":"잘못된 엑세스 키입니다.","name":"invalid_access_key"}}, error=invalid_access_key, errorMessage=잘못된 엑세스 키입니다.)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
