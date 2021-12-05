@@ -1,9 +1,12 @@
 plugins {
 	id 'java'
+	id 'maven-publish'
+	id 'signing'
 }
 
 group 'dev.itcode'
-version '1.0'
+archivesBaseName = 'upbit-api-java'
+version '1.0.0'
 
 targetCompatibility = 1.8
 sourceCompatibility = 1.8
@@ -23,8 +26,8 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.auth0/java-jwt
 	implementation group: 'com.auth0', name: 'java-jwt', version: '3.18.2'
 	
-	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 test {
@@ -33,4 +36,19 @@ test {
 
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
+}
+
+publishing {
+	publications {
+	}
+	repositories {
+		maven {
+			name = "upbit-api-java" //  optional target repository name
+			url = "https://github.com/RWB0104/upbit-api-java"
+			credentials {
+				username = ossrhUsername
+				password = ossrhPassword
+			}
+		}
+	}
 }

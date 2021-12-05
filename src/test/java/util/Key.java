@@ -8,6 +8,6 @@ package util;
  */
 public class Key
 {
-	public static final String API = "{API_KEY}";
-	public static final String SECRET = "{SECRET_KEY}";
+	public static final String API = "";
+	public static final String SECRET = "";
 }
