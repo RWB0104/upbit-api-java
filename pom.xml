@@ -6,12 +6,12 @@
 
     <groupId>dev.itcode</groupId>
     <artifactId>upbit-api-java</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>Upbit API for JAVA</name>
     <description>Upbit API 자바 라이브러리</description>
-    <url>https://github.com/RWB0104/upbit-api-java</url>
+    <url>https://github.com/itcode-dev/upbit-api-java</url>
 
     <licenses>
         <license>
@@ -30,9 +30,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/RWB0104/upbit-api-java,git</connection>
-        <developerConnection>scm:git:ssh://github.com/RWB0104/upbit-api-java,git</developerConnection>
-        <url>https://github.com/RWB0104/upbit-api-java</url>
+        <connection>scm:git:git://github.com/itcode-dev/upbit-api-java.git</connection>
+        <developerConnection>scm:git:git@github.com:itcode-dev/upbit-api-java.git</developerConnection>
+        <url>https://github.com/itcode-dev/upbit-api-java</url>
     </scm>
 
     <distributionManagement>
