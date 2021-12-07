@@ -1,5 +1,6 @@
 package quotation;
 
+import api.agent.UpbitApi;
 import api.quotation.bean.OrderBook;
 import api.quotation.module.OrderBookApi;
 import org.junit.jupiter.api.Test;
@@ -21,7 +22,7 @@ public class OrderBookTest
 	{
 		try
 		{
-			UpbitResponse<OrderBook[]> response = new OrderBookApi().getOrderBooks(new String[] {
+			UpbitResponse<OrderBook[]> response = new UpbitApi().getOrderBooks(new String[] {
 					"KRW-BTC",
 					"BTC-ETH"
 			});

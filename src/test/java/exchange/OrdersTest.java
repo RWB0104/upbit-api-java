@@ -65,7 +65,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order[]> response = new OrdersApi(Key.API, Key.SECRET).getOrderLists();
+			UpbitResponse<Order[]> response = new UpbitAuthApi(Key.API, Key.SECRET).getOrderLists();
 			
 			System.out.println(response);
 			
@@ -89,7 +89,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order[]> response = new OrdersApi(Key.API, Key.SECRET).getOrderLists("KRW-BTC", "done");
+			UpbitResponse<Order[]> response = new UpbitAuthApi(Key.API, Key.SECRET).getOrderLists("KRW-BTC", "done");
 			
 			System.out.println(response);
 			
@@ -115,7 +115,7 @@ public class OrdersTest
 		{
 			String[] temp = new String[] {};
 			
-			UpbitResponse<Order[]> response = new OrdersApi(Key.API, Key.SECRET).getOrderLists("KRW-BTC", temp, temp, "done", temp, 1, 100, "desc");
+			UpbitResponse<Order[]> response = new UpbitAuthApi(Key.API, Key.SECRET).getOrderLists("KRW-BTC", temp, temp, "done", temp, 1, 100, "desc");
 			
 			System.out.println(response);
 			
@@ -139,7 +139,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order> response = new OrdersApi(Key.API, Key.SECRET).deleteOrder("d4788ecf-79fe-4bb5-85ad-a8e37048ac5d");
+			UpbitResponse<Order> response = new UpbitAuthApi(Key.API, Key.SECRET).deleteOrder("d4788ecf-79fe-4bb5-85ad-a8e37048ac5d");
 			
 			System.out.println(response);
 		}
@@ -158,7 +158,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order> response = new OrdersApi(Key.API, Key.SECRET).deleteOrder("", "");
+			UpbitResponse<Order> response = new UpbitAuthApi(Key.API, Key.SECRET).deleteOrder("", "");
 			
 			System.out.println(response);
 		}
@@ -177,7 +177,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order> response = new OrdersApi(Key.API, Key.SECRET).postBuyOrder("KRW-BTC", 10000);
+			UpbitResponse<Order> response = new UpbitAuthApi(Key.API, Key.SECRET).postBuyOrder("KRW-BTC", 10000);
 			
 			System.out.println(response);
 		}
@@ -196,7 +196,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order> response = new OrdersApi(Key.API, Key.SECRET).postBuyOrder("KRW-BTC", 10000, UUID.randomUUID().toString());
+			UpbitResponse<Order> response = new UpbitAuthApi(Key.API, Key.SECRET).postBuyOrder("KRW-BTC", 10000, UUID.randomUUID().toString());
 			
 			System.out.println(response);
 		}
@@ -215,7 +215,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order> response = new OrdersApi(Key.API, Key.SECRET).postLimitOrder("KRW-BTC", "bid", 1, 1000000, UUID.randomUUID().toString());
+			UpbitResponse<Order> response = new UpbitAuthApi(Key.API, Key.SECRET).postLimitOrder("KRW-BTC", "bid", 1, 1000000, UUID.randomUUID().toString());
 			
 			System.out.println(response);
 		}
@@ -234,7 +234,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order> response = new OrdersApi(Key.API, Key.SECRET).postSellOrder("KRW-BTC", 10000);
+			UpbitResponse<Order> response = new UpbitAuthApi(Key.API, Key.SECRET).postSellOrder("KRW-BTC", 10000);
 			
 			System.out.println(response);
 		}
@@ -253,7 +253,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order> response = new OrdersApi(Key.API, Key.SECRET).postSellOrder("KRW-BTC", 10000, UUID.randomUUID().toString());
+			UpbitResponse<Order> response = new UpbitAuthApi(Key.API, Key.SECRET).postSellOrder("KRW-BTC", 10000, UUID.randomUUID().toString());
 			
 			System.out.println(response);
 		}
@@ -272,7 +272,7 @@ public class OrdersTest
 	{
 		try
 		{
-			UpbitResponse<Order> response = new OrdersApi(Key.API, Key.SECRET).postLimitOrder("KRW-QTUM", "ask", 1, 100000, UUID.randomUUID().toString());
+			UpbitResponse<Order> response = new UpbitAuthApi(Key.API, Key.SECRET).postLimitOrder("KRW-QTUM", "ask", 1, 100000, UUID.randomUUID().toString());
 			
 			System.out.println(response);
 		}
